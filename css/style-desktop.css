@@ -151,11 +151,11 @@
 				border-bottom: solid 0em #fff;
 				border-left: solid 0.5em transparent;
 				border-right: solid 0.5em transparent;
-				-moz-transition: border-bottom-width .25s ease-in-out;
-				-webkit-transition: border-bottom-width .25s ease-in-out;
-				-o-transition: border-bottom-width .25s ease-in-out;
-				-ms-transition: border-bottom-width .25s ease-in-out;
-				transition: border-bottom-width .25s ease-in-out;
+				-moz-transition: border-bottom-width .25s ease-out;
+				-webkit-transition: border-bottom-width .25s ease-out;
+				-o-transition: border-bottom-width .25s ease-out;
+				-ms-transition: border-bottom-width .25s ease-out;
+				transition: border-bottom-width .25s ease-out;
 			}
 		
 			#nav a span
@@ -270,11 +270,11 @@
 					line-height: 2.75em;
 					font-size: 1.5em;
 					z-index: 1;
-					-moz-transition: width .15s ease-in-out, padding-right .15s ease-in-out;
-					-webkit-transition: width .15s ease-in-out, padding-right .15s ease-in-out;
-					-o-transition: width .15s ease-in-out, padding-right .15s ease-in-out;
-					-ms-transition: width .15s ease-in-out, padding-right .15s ease-in-out;
-					transition: width .15s ease-in-out, padding-right .15s ease-in-out;
+					-moz-transition: width .15s ease-out, padding-right .15s ease-out;
+					-webkit-transition: width .15s ease-out, padding-right .15s ease-out;
+					-o-transition: width .15s ease-out, padding-right .15s ease-out;
+					-ms-transition: width .15s ease-out, padding-right .15s ease-out;
+					transition: width .15s ease-out, padding-right .15s ease-out;
 				}
 
 					#me .pic .arrow:before

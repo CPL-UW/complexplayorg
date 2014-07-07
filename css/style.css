@@ -837,7 +837,7 @@
 		{
 			position: relative;
 			display: inline-block;
-			color: #fff;
+			color: #f5f;
 			width: 1em;
 			height: 1em;
 			line-height: 0.9em;
@@ -847,7 +847,25 @@
 			{
 				padding-right: 0;
 			}
-		
+
+            .divider
+            {
+                border-top: solid 1px #e5e5e5;
+                border-bottom: solid 1px #e5e5e5;
+                height: 4px;
+                margin: 2em 0 2em 0;
+            }
+
+                .divider-top
+            {
+                margin-bottom: 0;
+            }
+
+            .divider-bottom
+            {
+                margin-top: 0;
+            }
+
 /*********************************************************************************/
 /* Panels                                                                        */
 /*********************************************************************************/
