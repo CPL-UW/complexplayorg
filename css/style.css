@@ -829,42 +829,24 @@
 /* Nav                                                                           */
 /*********************************************************************************/
 	
-	#nav
-	{
-	}
-	
-		#nav a
-		{
-			position: relative;
-			display: inline-block;
-			color: #f5f;
-			width: 1em;
-			height: 1em;
-			line-height: 0.9em;
-		}
+    #nav
+    {
+    }
+        
+    #nav a
+    {
+        position: relative;
+        display: inline-block;
+        color: #f5f;
+        width: 1em;
+        height: 1em;
+        line-height: 0.9em;
+    }
 
-			#nav a.icon:before
-			{
-				padding-right: 0;
-			}
-
-            .divider
-            {
-                border-top: solid 1px #e5e5e5;
-                border-bottom: solid 1px #e5e5e5;
-                height: 4px;
-                margin: 2em 0 2em 0;
-            }
-
-                .divider-top
-            {
-                margin-bottom: 0;
-            }
-
-            .divider-bottom
-            {
-                margin-top: 0;
-            }
+    #nav a.icon:before
+    {
+        padding-right: 0;
+    }
 
 /*********************************************************************************/
 /* Panels                                                                        */
@@ -914,24 +896,63 @@
 /* Footer                                                                        */
 /*********************************************************************************/
 
-	#footer
-	{
-		color: #ccc;
-		color: rgba(255,255,255,0.45);
-	}
-	
-		#footer a
-		{
-			color: #ddd;
-			color: rgba(255,255,255,0.65);
-			-moz-transition: color .25s ease-in-out;
-			-webkit-transition: color .25s ease-in-out;
-			-o-transition: color .25s ease-in-out;
-			-ms-transition: color .25s ease-in-out;
-			transition: color .25s ease-in-out;
-		}
-		
-		#footer a:hover
-		{
-			color: rgba(255,255,255,1.0);
-		}
+    #footer
+    {
+        color: #505;
+}
+
+#footer a
+{
+    color: #505;
+    -moz-transition: color .25s ease-in-out;
+    -webkit-transition: color .25s ease-in-out;
+    -o-transition: color .25s ease-in-out;
+    -ms-transition: color .25s ease-in-out;
+    transition: color .25s ease-in-out;
+}
+
+#footer a:hover
+{
+    color: #f5f;
+}
+
+/***************
+ * USER
+ * ***********/
+
+
+.empty-user 
+{
+    font-size: 8em;
+}
+
+.thumbnail a
+{
+    text-align: center;
+    overflow: hidden;
+    border: solid 5px #fff;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.25);
+    float: left;
+    margin-right: 10px;
+    width: 195px;
+    height: 260px;
+}
+
+.divider
+{
+    border-top: solid 1px #e5e5e5;
+    border-bottom: solid 1px #e5e5e5;
+    height: 2px;
+    margin: 1em 0 1em 0;
+}
+
+.divider-top
+{
+    margin-bottom: 0;
+}
+
+.divider-bottom
+{
+    margin-top: 0;
+}
+
