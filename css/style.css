@@ -938,6 +938,24 @@
     height: 260px;
 }
 
+.thumbnail-partner a
+{
+	text-align: center;
+    overflow: hidden;
+    border: solid 5px #fff;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.25);
+    float: left;
+    margin-right: 10px;
+    width: 260px;
+    height: 195px;
+}
+
+.thumbnail-partner a img
+{
+	width: 250px;
+    height: 188px;	
+}
+
 .divider
 {
     border-top: solid 1px #e5e5e5;
