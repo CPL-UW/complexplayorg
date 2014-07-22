@@ -952,6 +952,7 @@
 
 .thumbnail-partner a img
 {
+	/*resize to prevent cut off images*/
 	width: 250px;
     height: 188px;	
 }
