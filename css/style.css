@@ -531,6 +531,24 @@
     height: 188px;	
 }
 
+.thumbnails .thumbnail blockquote
+{
+	margin: 0 0 0.75em 0;
+	margin-left: 130px;
+}
+
+.thumbnails .thumbnail cite
+{
+	color: #888;
+	margin-left: 130px;
+	display: block;
+}
+
+.thumbnails .thumbnail cite strong
+{
+	padding-right: 0.25em;
+}
+
 .divider
 {
     border-top: solid 1px #e5e5e5;
