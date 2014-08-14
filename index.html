@@ -11,7 +11,6 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
-        <!-- link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" /--!>
         <script src="js/jquery.min.js"></script>
         <script src="js/skel.min.js"></script>
         <script src="js/init.js"></script>
@@ -31,7 +30,25 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             <link rel="stylesheet" href="css/noscript.css" />
         </noscript>
         <link rel="stylesheet" href="css/font-awesome.min.css">
-        <!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+        <script type="text/javascript" src="http://bibtex-js.googlecode.com/svn/trunk/src/bibtex_js.js"></script>
+        <script type="text/javascript">
+            function bibtex_js_draw() {
+            	$(".bibtex_template").hide();
+            	(new BibtexDisplay()).displayBibtex($("#bibtex_input").val(), $("#bibtex_display"));
+            }
+            $(document).ready(function() {
+            	$("#bibtex_input").load("cpl.bib", bibtex_js_draw);
+            });
+        </script>
+        <style>
+            .apa li {
+                list-style-type: none;
+            }
+            .apa p, .apa li {
+                margin-left:   5em;
+                text-indent:  -5em;
+            }
+        </style>
     </head>
     <body class="homepage">
 
@@ -95,17 +112,51 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 <!-- papers -->
                 <article id="papers" class="panel">
                 <header>
-                <h2>papers</h2>
+                <h2>selected work</h2>
                 </header>
-                <div>
-                    <a href="https://wisc.academia.edu/MatthewBerland">Matthew Berland at ACADEMIA.EDU </a>
-                    <span class="fa fa-external-link">&nbsp;</span>
-                    <br />
-                    <a href="http://scholar.google.com/citations?user=91X3w90AAAAJ">Matthew Berland at GOOGLE SCHOLAR </a>
-                    <span class="fa fa-external-link"></span>
-                </div>
+				<div class="bibtex_template">
+					<li >
+						<span class="if year" style="color:#005500;">
+							<span class="year"></span>:&nbsp; 
+						</span>
+						<span class="if author" style="color:#000055;">
+							<span class="author"></span>
+						</span>
+						<br />
+						<span class="title" style="color:black;"></span>.
+						<br />
+						<span style="if booktitle" style="font-style: italic;">
+							<i><span class="booktitle"></span></i>
+						</span>
+						<span style="if journal" style="font-style: italic;">
+							<i><span class="journal"></span></i>
+						</span>
+						<span class="if volume">
+							<i><span class="volume"></span></i>
+							<span class="if number">
+								(<span class="number"></span>)
+							</span>
+                            <span class="if pages">
+                                pp <span class="pages"></span>
+                            </span>
+                        </span>
+                        <span class="if url">
+                            <a class="url" style="color:black;">(view online)</a>
+                        </span>
+                        </li>
+                    </div> 
+                    <textarea id="bibtex_input" style="display:none;">
+                    </textarea>
+                    <div id="bibtex_display"  class="apa" style="font-size:18px;line-height: 1.25em;"></div> 
+                    <div>
+                         <a href="https://wisc.academia.edu/MatthewBerland">Matthew Berland at ACADEMIA.EDU </a>
+                         <span class="fa fa-external-link">&nbsp;</span>
+                         <br />
+                         <a href="http://scholar.google.com/citations?user=91X3w90AAAAJ">Matthew Berland at GOOGLE SCHOLAR </a>
+                         <span class="fa fa-external-link"></span>
+                     </div> 
                 </article>
-
+                
                 <article id="people" class="panel">
                 <header>
                 <h2>people</h2>
