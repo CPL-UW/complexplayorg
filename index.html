@@ -22,6 +22,23 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
           ga('create', 'UA-53726901-1', 'auto');
           ga('send', 'pageview');
+      </script>
+      <script type="text/javascript">
+          $(function() {
+                  $("a").on('click',function(e){
+                      var url = $(this).attr("href");
+                      if (e.currentTarget.host != window.location.host) {
+                          _gat._getTrackerByName()._trackEvent("Outbound Links", e.currentTarget.host.replace(':80',''), url, 0);
+                          if (e.metaKey || e.ctrlKey || this.target == "_blank") {
+                              var newtab = true;
+                          }
+                          if (!newtab) {
+                              e.preventDefault();
+                              setTimeout('document.location = "' + url + '"', 100);
+                          }
+                      }
+                  });
+              });
         </script>
         <noscript>
             <link rel="stylesheet" href="css/skel-noscript.css" />
