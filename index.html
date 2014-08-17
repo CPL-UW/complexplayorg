@@ -24,19 +24,15 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
           ga('send', 'pageview');
       </script>
       <script type="text/javascript">
+          var trackOutboundLink = function(url) {
+              ga('send', 'event', 'outbound', 'click', url, {'hitCallback': function () { document.location = url; }});
+          }
           $(function() {
                   $("a").on('click',function(e){
                       var url = $(this).attr("href");
                       if (e.currentTarget.host != window.location.host) {
-                          _gat._getTrackerByName()._trackEvent("Outbound Links", e.currentTarget.host.replace(':80',''), url, 0);
-                          if (e.metaKey || e.ctrlKey || this.target == "_blank") {
-                              var newtab = true;
-                          }
-                          if (!newtab) {
-                              e.preventDefault();
-                              setTimeout('document.location = "' + url + '"', 100);
-                          }
-                      }
+                          trackOutboundLink(e.currentTarget.host.replace(':80',''));
+                        }
                   });
               });
         </script>
