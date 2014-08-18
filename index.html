@@ -27,11 +27,10 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
       </script>
       <script type="text/javascript">
           var trackOutboundLink = function(url) {
-              ga('send', 'event', 'outbound', 'click', url, {'hitCallback': function () { document.location = url; }});
+              ga('send', 'event', 'outbound', 'click', url);
           }
           $(function() {
                   $("a").on('click',function(e){
-                      var url = $(this).attr("href");
                       if (e.currentTarget.host != window.location.host) {
                           trackOutboundLink(e.currentTarget.host.replace(':80',''));
                         }
