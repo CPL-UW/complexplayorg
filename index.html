@@ -44,15 +44,25 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             <link rel="stylesheet" href="css/noscript.css" />
         </noscript>
         <link rel="stylesheet" href="css/font-awesome.min.css">
-        <script type="text/javascript" src="http://bibtex-js.googlecode.com/svn/trunk/src/bibtex_js.js"></script>
+        <!--<script type="text/javascript" src="http://bibtex-js.googlecode.com/svn/trunk/src/bibtex_js.js"></script>-->
+        <script type="text/javascript" src="js/bibtex_js.min.js"></script>
         <script type="text/javascript">
             function bibtex_js_draw() {
             	$(".bibtex_template").hide();
             	(new BibtexDisplay()).displayBibtex($("#bibtex_input").val(), $("#bibtex_display"));
             }
+            function bx(b,a) {
+            	$(".bibtex_template").hide();
+            	(new BibtexDisplay()).displayBibtex($(a).val(), $(b));
+            }
             $(document).ready(function() {
-            	$("#bibtex_input").load("cpl.bib", bibtex_js_draw);
-            });
+                    $("#bibtex_input").load("cplpapers.bib", function() {
+                        bx("#bibtex_display","#bibtex_input");
+                    });
+                    $("#bibtex_input_other").load("cplother.bib", function() {
+                        bx("#bibtex_display_other","#bibtex_input_other");
+                    });
+                });
         </script>
         <style>
             .apa li {
@@ -159,9 +169,14 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                         </span>
                         </li>
                     </div> 
-                    <textarea id="bibtex_input" style="display:none;">
-                    </textarea>
+                    <h3>papers</h3>
+                    <textarea id="bibtex_input" style="display:none;"></textarea>
                     <div id="bibtex_display"  class="apa" style="font-size:18px;line-height: 1.25em;"></div> 
+                    <p>
+                    <h3>conferences</h3>
+                    <textarea id="bibtex_input_other" style="display:none;"></textarea>
+                    <div id="bibtex_display_other"  class="apa" style="font-size:18px;line-height: 1.25em;"></div> 
+                    <p> 
                     <div>
                          <a href="https://wisc.academia.edu/MatthewBerland">Matthew Berland at ACADEMIA.EDU </a>
                          <span class="fa fa-external-link">&nbsp;</span>
@@ -169,6 +184,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                          <a href="http://scholar.google.com/citations?user=91X3w90AAAAJ">Matthew Berland at GOOGLE SCHOLAR </a>
                          <span class="fa fa-external-link"></span>
                      </div> 
+                     
                 </article>
                 
                 <article id="people" class="panel">
