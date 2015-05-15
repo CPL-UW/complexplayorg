@@ -67,10 +67,15 @@
 	
 	body, input, textarea
 	{
-		font-family: 'Source Sans Pro', sans-serif;
+        font-family: 'Fira Sans', sans-serif;
 		font-weight: 300;
 		color: #777;
 	}
+
+    span 
+    {
+        font-family: 'Fira Sans', sans-serif;
+    }
 	
 	strong, b
 	{
