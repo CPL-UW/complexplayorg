@@ -1,0 +1,29 @@
+.hover_box {
+	font-size:80%;
+}
+
+.hover_box h3 {
+	display: none;
+}
+
+.hover_box p {
+	display: none;
+}
+
+.hover_box:hover h3, 
+.hover_box:focus h3 {
+	text-align: justify;
+	display: block;
+}
+
+.hover_box:hover p, 
+.hover_box:focus p {
+	text-align: justify;
+	line-height: 100%;
+	display: block;
+}
+
+.hover_box:hover img,
+.hover_box:focus img {
+	display: none;
+}
